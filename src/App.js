@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import ContactForm from "./components/ContactForm";
+import LottieSection from "./components/LottieSection";
+import SnackbarProvider from "react-simple-snackbar";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <SnackbarProvider>
+      <div className="App md:h-screen w-screen bg-gray-100">
+        <div className="h-full flex  flex-col-reverse sm:flex-row max-w-[1196px] mx-auto  items-center justify-center">
+          {/* //form */}
+          <ContactForm />
+          {/* //how can i help */}
+          <LottieSection />
+        </div>
+      </div>
+    </SnackbarProvider>
   );
 }
 
